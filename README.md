@@ -28,36 +28,7 @@ A hands-on home lab built from scratch to simulate enterprise-level IT infrastru
 
 ---
 
-## 🏗️ Network Architecture
-
-
-Internet (8.8.8.8 Google DNS)
-↓
-VirtualBox NAT Router (192.168.1.1)
-↓
-┌──────────────────────────────────────────┐
-│          NAT Network 192.168.1.0/24      │
-│                                          │
-│  DC01 — Windows Server 2022             │
-│  IP: 192.168.1.10 (Static)              │
-│  ├── Active Directory (lab.local)        │
-│  ├── DNS Server + 8.8.8.8 Forwarder     │
-│  ├── DHCP Server (scope .50-.100)        │
-│  ├── VPN Server (L2TP/IPsec)            │
-│  └── Windows Server Backup              │
-│                                          │
-│  Windows 11 Pro Client                  │
-│  IP: 192.168.1.50 (DHCP from DC01)     │
-│  ├── Domain joined (lab.local)           │
-│  └── VPN Client (L2TP connected)        │
-└──────────────────────────────────────────┘
-↕ (Hybrid Identity)
-Microsoft Azure Entra ID
-Student829.onmicrosoft.com
-├── Users: utsarga dhakal, utd1, utd2
-├── Groups: Help desk team, IT TEAM, All Company
-├── Role: Helpdesk Administrator assigned
-└── Sign-in logs monitored
+<img width="387" height="617" alt="image" src="https://github.com/user-attachments/assets/69f9b714-8b1c-473c-a4ba-37bef599b6e9" />
 
 ## ✅ Phases Completed
 
