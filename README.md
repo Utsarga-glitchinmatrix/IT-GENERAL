@@ -183,50 +183,7 @@ A hands-on home lab built from scratch to simulate enterprise-level IT infrastru
 
 ---
 
-## 📋 Lab Overview
-
-| Detail | Value |
-|---|---|
-| **Domain** | lab.local |
-| **Domain Controller** | DC01 — Windows Server 2022 |
-| **Client Machine** | Windows 11 Pro |
-| **Network** | NAT (192.168.1.0/24) |
-| **DC01 IP** | 192.168.1.10 (Static) |
-| **Client IP** | 192.168.1.50 (DHCP) |
-| **Cloud Tenant** | Student829.onmicrosoft.com |
-| **Cloud Platform** | Microsoft Azure for Students ($100 credit) |
-| **Cloud Admin Role** | Global Administrator |
-
----
-
-## 🏗️ Network Architecture
-Internet (8.8.8.8 Google DNS)
-↓
-VirtualBox NAT Router (192.168.1.1)
-↓
-┌──────────────────────────────────────────┐
-│          NAT Network 192.168.1.0/24      │
-│                                          │
-│  DC01 — Windows Server 2022             │
-│  IP: 192.168.1.10 (Static)              │
-│  ├── Active Directory (lab.local)        │
-│  ├── DNS Server + 8.8.8.8 Forwarder     │
-│  ├── DHCP Server (scope .50-.100)        │
-│  ├── VPN Server (L2TP/IPsec)            │
-│  └── Windows Server Backup              │
-│                                          │
-│  Windows 11 Pro Client                  │
-│  IP: 192.168.1.50 (DHCP from DC01)     │
-│  ├── Domain joined (lab.local)           │
-│  └── VPN Client (L2TP connected)        │
-└──────────────────────────────────────────┘
-↕ (Hybrid Identity)
-Microsoft Azure Entra ID
-Student829.onmicrosoft.com
-├── Users: utsarga dhakal, utd1, utd2
-├── Groups: Help desk team, IT TEAM, All Company
-├── Role: Helpdesk Administrator assigned
-└── Sign-in logs monitored
+<img width="492" height="906" alt="image" src="https://github.com/user-attachments/assets/19522463-2d1e-427a-8c35-9fe89bef92e8" />
 
 ---
 
